@@ -8,7 +8,7 @@ function AdminNavbar() {
   return (
     <div className='h-[3rem] bg-[#2B2D31]  items-center  w-screen text-white border-b-[2px] border-[#1E1F22] flex justify-between px-[1.7rem]' >
      <div className='text-gray-400 ' style={{fontFamily:'Nunito'}} data-tooltip-id='adminText' >Admin</div>
-        <div className='lg:flex h-full justify-center items-center hidden gap-[22px] cursor-pointer '><FaUserCircle  size={22} /> <HiOutlineLogout size={24}/>   </div>
+        <div className='lg:flex h-full justify-center items-center hidden gap-[22px] cursor-pointer text-gray-400'><FaUserCircle  size={22} /> <HiOutlineLogout size={27}/>   </div>
         <div className=' cursor-pointer lg:hidden relative' onClick={()=>{setShowMenu(!showMenu)}}><CgMenu size={24}/>
         <ul className={`${showMenu ?'block':'hidden'}  absolute top-[100%] right-[0px] bg-[#2B2D31] shadow-[0px_0px_1px_0px_#ffffff]  select-none`}>
             
