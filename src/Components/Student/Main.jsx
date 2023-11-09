@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
+
 
 function Main() {
+    const [myQuizData,setMyQuizData]=useState([])
   return (
     <div className='w-screen h-screen flex justify-center'>
         <div className=' w-[45rem] border-x-[1px]  border-gray-500 text-gray-400 pt-[2rem] px-4'>
@@ -10,7 +12,39 @@ function Main() {
                 <span>Topic</span>
                 <span>date</span>
                 <span>Group</span>
-                <span>Total Students</span>
+                <span>Total Marks</span>
+                <span>Total Questions</span>
+                <span className='w-full flex justify-end'>quiz id</span>
+            </div>
+            <div className='border-2 border-gray-600 w-full rounded-lg flex flex-col px-4 py-4 text-gray-300 hover:border-gray-400 cursor-pointer'> 
+                <span>Topic</span>
+                <span>date</span>
+                <span>Group</span>
+                <span>Total Marks</span>
+                <span>Total Questions</span>
+                <span className='w-full flex justify-end'>quiz id</span>
+            </div>
+            <div className='border-2 border-gray-600 w-full rounded-lg flex flex-col px-4 py-4 text-gray-300 hover:border-gray-400 cursor-pointer'> 
+                <span>Topic</span>
+                <span>date</span>
+                <span>Group</span>
+                <span>Total Marks</span>
+                <span>Total Questions</span>
+                <span className='w-full flex justify-end'>quiz id</span>
+            </div>
+            <div className='border-2 border-gray-600 w-full rounded-lg flex flex-col px-4 py-4 text-gray-300 hover:border-gray-400 cursor-pointer'> 
+                <span>Topic</span>
+                <span>date</span>
+                <span>Group</span>
+                <span>Total Marks</span>
+                <span>Total Questions</span>
+                <span className='w-full flex justify-end'>quiz id</span>
+            </div>
+            <div className='border-2 border-gray-600 w-full rounded-lg flex flex-col px-4 py-4 text-gray-300 hover:border-gray-400 cursor-pointer'> 
+                <span>Topic</span>
+                <span>date</span>
+                <span>Group</span>
+                <span>Total Marks</span>
                 <span>Total Questions</span>
                 <span className='w-full flex justify-end'>quiz id</span>
             </div>

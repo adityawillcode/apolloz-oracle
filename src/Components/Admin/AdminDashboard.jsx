@@ -4,7 +4,7 @@ import LeftSidebar from './LeftSidebar'
 import {BsLayoutSidebarInsetReverse} from 'react-icons/bs'
 import Main from './Main'
 function AdminDashboard() {
-  const [leftSidebarOpen,setLeftSidebarOpen]=useState(false)
+  const [leftSidebarOpen,setLeftSidebarOpen]=useState(true)
   return (
  
       <div className='bg-[#2B2D31] h-screen w-screen fixed'>

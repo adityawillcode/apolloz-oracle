@@ -24,7 +24,7 @@ const navigate=useNavigate()
     <li>group 1</li>
    </ul>
     </div>
-    <div className='pt-[1rem] flex flex-col w-full'>
+    <div className='pt-[1rem] flex flex-col w-full px-[0.7rem]'>
     <button className='border-[1px] text-gray-400 py-[5px] rounded-md border-gray-400 hover:border-gray-300 hover:text-gray-300 flex justify-center items-center' onClick={()=>{navigate('/admin/dashboard/create-quiz')}}>Generate a quiz</button>
     </div>
   </div>
