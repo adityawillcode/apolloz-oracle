@@ -12,8 +12,8 @@ function Signin({setAuthKey}) {
       <h1 className='text-gray-300 text-[1.5rem] ' style={{fontFamily:'Nunito'}}>Sign In </h1>
       <form action="" onSubmit={handleSubmit(onSubmit)} className='flex flex-col w-full p-[2rem] gap-[0.5rem] text-gray-300' style={{fontFamily:'Nunito'}}>
         <div className='flex flex-col gap-[2rem]'>
-        <input type="email" {...register('email')} className='bg-transparent border-b-[2px] border-gray-500 outline-none ' placeholder='Enter Email' />
-        <input type={`${showPassword?'text':'password'}`}  {...register('password')} className='bg-transparent border-b-[2px] border-gray-500 outline-none ' placeholder='Enter Password'/>
+        <input type="email" {...register('email')} className='bg-transparent border-b-[2px] border-gray-500 outline-none text-gray-300 ' placeholder='Enter Email' />
+        <input type={`${showPassword?'text':'password'}`}  {...register('password')} className='bg-transparent border-b-[2px] text-gray-300 border-gray-500 outline-none ' placeholder='Enter Password'/>
         </div>
         <div className='flex justify-between pt-[0.4rem]'><span className='text-[14px] flex justify-center items-center cursor-pointer gap-[3px]' onClick={()=>{setShowPassword(!showPassword)}} ><input type="checkbox" checked={showPassword} className='bg-transparent' />show password</span> <span className='text-[14px] text-gray-300 font-thin cursor-pointer' onClick={()=>{setAuthKey('SIGNUP')}}>don't have an account?</span></div>
       <div className='w-full flex justify-between gap-4 mt-[0.6rem]'>
