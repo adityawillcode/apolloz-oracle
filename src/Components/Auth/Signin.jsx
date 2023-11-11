@@ -1,14 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {useForm} from 'react-hook-form'
 function Signin({setAuthKey}) {
   const {register,handleSubmit,reset}=useForm()
   const [showPassword,setShowPassword]=useState(false)
-  const onSubmit= () => {
+ 
+  const onSubmit = () => {
 
   };
-  // shadow-[0px_0px_100px_0px_#f7fafc]
+  
+
+  
+
   return (
-    <div className='w-[25rem] p-[1rem] border-[2px] rounded-lg flex justify-center items-center flex-col border-gray-500 select-none  shadow-[0px_0px_10px_0px_#ffffff] '>
+
+    <div>
+  
+      
+     <div className='w-[25rem] p-[1rem] border-[2px] rounded-lg flex justify-center items-center flex-col border-gray-500 select-none  shadow-[0px_0px_10px_0px_#ffffff] '>
       <h1 className='text-gray-300 text-[1.5rem] ' style={{fontFamily:'Nunito'}}>Sign In </h1>
       <form action="" onSubmit={handleSubmit(onSubmit)} className='flex flex-col w-full p-[2rem] gap-[0.5rem] text-gray-300' style={{fontFamily:'Nunito'}}>
         <div className='flex flex-col gap-[2rem]'>
@@ -21,9 +29,13 @@ function Signin({setAuthKey}) {
         <button className='border  border-gray-500 py-[5px] rounded-md text-[0.9rem] hover:bg-gray-800 flex-1 ' onClick={()=>{setAuthKey('SIGNUP')}}>Sign up</button>
       </div>
       </form>
-     
+    
 
-    </div>
+      </div>
+
+  </div>
+     
+   
   )
 }
 
