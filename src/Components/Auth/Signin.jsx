@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {useForm} from 'react-hook-form'
+import { GoogleLoginButton,GithubLoginButton } from 'react-social-login-buttons'
 function Signin({setAuthKey}) {
   const {register,handleSubmit,reset}=useForm()
   const [showPassword,setShowPassword]=useState(false)
@@ -8,6 +9,12 @@ function Signin({setAuthKey}) {
 
   };
   
+const googleLogin = () => {
+  window.open('http://localhost:4000/auth/google',"_self")
+};
+const auth = () => {
+  window.open('http://localhost:4000/auth')
+};
 
   
 
@@ -28,8 +35,10 @@ function Signin({setAuthKey}) {
       <button className='border  border-gray-500 py-[5px] rounded-md text-[0.9rem] hover:bg-gray-800 flex-1 ' type='submit'>Sign in</button>
         <button className='border  border-gray-500 py-[5px] rounded-md text-[0.9rem] hover:bg-gray-800 flex-1 ' onClick={()=>{setAuthKey('SIGNUP')}}>Sign up</button>
       </div>
+      <div className='flex  items-center'> <span className='flex-grow h-[1px] bg-gray-400'></span><span className='text-[10px] text-gray-400'>social-login</span><span className='flex-grow h-[1px] bg-gray-400'></span></div>
+    <GoogleLoginButton size='30px' align='center' iconSize='20px' style={{background:'white',fontFamily:'Nunito',}} onClick={googleLogin}>Login with Google</GoogleLoginButton>
+    <GithubLoginButton size='30px' align='center' iconSize='20px' iconColor='black' style={{background:'white',color:'black'}} onClick={auth} >Login with Github</GithubLoginButton>
       </form>
-    
 
       </div>
 
