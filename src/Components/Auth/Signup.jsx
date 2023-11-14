@@ -2,11 +2,16 @@ import React ,{useState} from 'react'
 import { GoogleLoginButton,GithubLoginButton } from 'react-social-login-buttons'
 import {useForm} from 'react-hook-form'
 function Signup({setAuthKey}) {
+  const [data,setData]=useState({})
   const {register,handleSubmit,reset}=useForm()
   const [showPassword,setShowPassword]=useState(false)
-  const onSubmit= () => {
-reset()
+  const onSubmit =  (formData) => {
+    console.log(formData);
+    
+
   };
+  
+  
   
   return (
     <div className='w-[25rem] p-[1rem] border-[2px] rounded-lg flex justify-center items-center flex-col border-gray-500 select-none   shadow-[0px_0px_10px_0px_#ffffff] '>
