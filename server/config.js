@@ -1,5 +1,5 @@
  const GOOGLE_CLIENT_SECRET='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'
 const GOOGLE_CLIENT_ID='229197492630-l6hrri8s4n8pntr8bq2126lt3ibs8ohp.apps.googleusercontent.com'
 const FAILURE_REDIRECT_ROUTE='http://localhost:3000/auth'
-const SUCESS_REDIRECT_ROUTE='http://localhost:3000'
+const SUCESS_REDIRECT_ROUTE='http://localhost:3000/'
 module.exports={GOOGLE_CLIENT_ID,GOOGLE_CLIENT_SECRET,FAILURE_REDIRECT_ROUTE,SUCESS_REDIRECT_ROUTE}

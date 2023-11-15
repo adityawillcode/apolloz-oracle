@@ -6,4 +6,6 @@
     display: none;
    }
 
-  
+   .world-map{
+    background: url('/src/Images/World\ Map.svg');
+   }

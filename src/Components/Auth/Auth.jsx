@@ -2,25 +2,28 @@ import React, { useState } from 'react'
 import Signin from './Signin'
 import Signup from './Signup'
 import { GoogleOAuthProvider } from '@react-oauth/google';
+import Authenticated from './Authenticated';
 
 
 
-function Auth() {
+function Auth({loginData}) {
     const [authKey,setAuthKey]=useState('SIGNIN')
     return (
-    <GoogleOAuthProvider clientId="406895328289-768of3k8hoe7q4jkg8g6m4q3274afj5o.apps.googleusercontent.com ">
+
    
-    <div className='bg-[#2B2D31] h-screen w-screen text-white flex justify-center items-center'>
+    <div className=' h-screen w-screen text-white flex justify-center items-center world-map'>
     {
-        authKey==='SIGNIN' &&  <Signin setAuthKey={setAuthKey} />
+        authKey==='SIGNIN' && !loginData.name &&  <Signin setAuthKey={setAuthKey} />
     }
     {
-      authKey==='SIGNUP' && <Signup setAuthKey={setAuthKey} />
+      authKey==='SIGNUP' && !loginData.name &&  <Signup setAuthKey={setAuthKey} />
+    }
+    {
+      loginData.name && <Authenticated loginData={loginData}/>
     }
     </div>
 
-  
-    </GoogleOAuthProvider>
+
   )
 }
 
