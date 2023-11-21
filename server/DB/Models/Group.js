@@ -1,14 +1,18 @@
 const mongoose = require('mongoose');
 
 const groupSchema = new mongoose.Schema({
+    groupName:{
+        type: String
+    }, 
 students:[
     {
         studentId:mongoose.Types.ObjectId,
         studentName:String
     }
 ],
-admin:[
+admins:[
     {
+        adminName:String,
         adminId:mongoose.Types.ObjectId 
     }
 ]

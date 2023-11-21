@@ -4,8 +4,22 @@
 
 .hide-scrollbar::-webkit-scrollbar {
     display: none;
-   }
+  }
+  
+     option{
+    color: black;
+     }
 
    .world-map{
     background: url('/src/Images/World\ Map.svg');
    }
+   .wave-bg{
+    background: url('/src/Images/Wave\ Line.svg');
+   }
+   .dashboard-bg{
+    background: url('/src//Images/Sprinkle.svg');
+    
+  }
+
+ 
+

@@ -21,7 +21,7 @@ const studentSchema = new mongoose.Schema({
         type: Boolean
     }
   }]
-});
+})
 
 const Student = mongoose.model('student', studentSchema);
 module.exports = Student;

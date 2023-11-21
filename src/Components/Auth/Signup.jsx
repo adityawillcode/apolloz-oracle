@@ -5,8 +5,11 @@ function Signup({setAuthKey}) {
   const [data,setData]=useState({})
   const {register,handleSubmit,reset}=useForm()
   const [showPassword,setShowPassword]=useState(false)
-  const onSubmit =  (formData) => {
-    console.log(formData);
+  const onSubmit = async (formData) => {
+    console.log(formData)
+    const result=await fetch('http://localhost:4000/signup/local',{credentials:'include',
+      method: 'POST',body:JSON.stringify({...formData,isLogin:false}),headers: {'Content-Type': 'application/json'}
+    })
     
 
   };
@@ -22,7 +25,7 @@ function Signup({setAuthKey}) {
         <input type="email" {...register('email')} className='text-gray-300 bg-transparent border-b-[2px] border-gray-500 outline-none  px-[0.4rem]' placeholder='Enter Email' />
         <input type={`${showPassword?'text':'password'}`} minLength={4} {...register('password')} className='text-gray-300 bg-transparent border-b-[2px] px-[0.4rem] border-gray-500 outline-none ' placeholder='Enter Password'/>
         </div>
-        <div className='flex justify-between pt-[0.4rem]'><span className='text-[14px] flex justify-center items-center cursor-pointer gap-[3px]' onClick={()=>{setShowPassword(!showPassword)}} ><input type="checkbox" checked={showPassword} className='bg-transparent' />show password</span> <span className='text-[14px] text-gray-300 font-thin cursor-pointer' onClick={()=>{setAuthKey('SIGNIN')}}>Already an account?</span></div>
+        <div className='flex justify-between pt-[0.4rem]'><span className='text-[14px] flex justify-center items-center cursor-pointer gap-[3px]' onClick={()=>{setShowPassword(!showPassword)}} ><input type="checkbox" checked={showPassword} onChange={()=>{setShowPassword(!showPassword)}} className='bg-transparent' />show password</span> <span className='text-[14px] text-gray-300 font-thin cursor-pointer' onClick={()=>{setAuthKey('SIGNIN')}}>Already an account?</span></div>
       <div className='w-full flex justify-between gap-4 mt-[0.6rem]'>
         <button className='border  border-gray-200 py-[5px] rounded-md text-[0.9rem] hover:bg-gray-800 flex-1 ' type='submit'>Sign up</button>
       <button className='border  border-gray-200 py-[5px] rounded-md text-[0.9rem] hover:bg-gray-800 flex-1 '  onClick={()=>{setAuthKey('SIGNIN')}}>Sign in</button>

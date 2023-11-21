@@ -2,10 +2,11 @@ const mongoose = require('mongoose');
 
 const UserSchema=new mongoose.Schema({
   name:String,
-  email:String,
+  email:{type:String},
+  profileId:String,
   userRole: {
     type: String,
-    enum: ['ADMIN', 'Student']
+    enum: ['ADMIN', 'STUDENT']
   },
   userId:mongoose.Types.ObjectId,
   provider:{

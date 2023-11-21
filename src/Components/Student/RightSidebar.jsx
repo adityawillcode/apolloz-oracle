@@ -9,7 +9,7 @@ const [notifications,setNotifications]=useState([])
   return (
  <>
    <AnimatePresence>
-     {notificationPanelOpen && <motion.div transition={{duration:'0.1'}} initial={{x:'15rem'}} animate={{x:'0rem'}} exit={{x:'15rem'}} className='pt-[1rem] w-[15rem] bg-[#202123] right-0 fixed bottom-0 top-[3rem] shadow-[inset_-12px_-8px_40px_#46464620]  border-r border-black'>
+     {notificationPanelOpen && <motion.div transition={{duration:'0.1'}} initial={{x:'15rem'}} animate={{x:'0rem'}} exit={{x:'15rem'}} className=' select-none pt-[1rem] w-[15rem] bg-black/40 right-0 fixed bottom-0 top-[3rem] shadow-[inset_-12px_-8px_40px_#46464620]  border-l border-gray-500'>
 <div  className='px-[1rem] w-full flex justify-between border-b-[1px] border-gray-500 h-[2.3rem]  text-gray-400 select-none ' style={{fontFamily:'Nunito'}}  > <BsLayoutSidebarInset size={22} className='inline-block  hover:text-white' onClick={()=>{setNotificationPanelOpen(false)}}/> <span>Notifications</span></div>
   {notifications.length>0 ? <div className='h-full flex flex-col'>
   

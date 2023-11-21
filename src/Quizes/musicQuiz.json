@@ -1,0 +1,1012 @@
+{
+    "boolean":{
+        "response_code": 0,
+        "results": [
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "Arcade Fire&#039;s &#039;The Suburbs&#039; won the Album of the Year award in the 2011 Grammys.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "Nick Mason is the only member to appear on every Pink Floyd album.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "EDM label Monstercat signs tracks instead of artists.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "A Facebook campaign placed Rage Against The Machine&#039;s &quot;Killing in the Name Of&quot; as the UK Christmas Number 1 in 2009.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "hard",
+            "category": "Entertainment: Music",
+            "question": "The song &quot;Mystery Train&quot; was released by artist &quot;Little Junior&#039;s Blue Flames&quot; in 1953.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "hard",
+            "category": "Entertainment: Music",
+            "question": "The band STRFKR was also briefly known as Pyramiddd.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "John Williams composed the music for &quot;Star Wars&quot;.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "Norwegian producer Kygo released a remix of the song &quot;Sexual Healing&quot; by Marvin Gaye.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "Soulja Boy&#039;s &#039;Crank That&#039; won a Grammy for Best Rap Song in 2007.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+              "True"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "hard",
+            "category": "Entertainment: Music",
+            "question": "Pete Townshend&#039;s solo album, &quot;White City: A Novel&quot;, is set in the metropolitan area of Chicago.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+              "True"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "&quot;Twenty One Pilots&quot; made the song &quot;The Motion&quot; featuring Sampha.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+              "True"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "Rapper Snoop Dogg&#039;s real name is &#039;Cordozar Calvin Broadus, Jr.&#039;.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "The music video to The Buggle&#039;s &quot;Video Killed the Radio Star&quot; was the first music video to broadcast on MTV.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "Stevie Wonder&#039;s real name is Stevland Hardaway Morris.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "In 1993, Prince changed his name to an unpronounceable symbol because he was unhappy with his contract with Warner Bros.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "&quot;The Division Bell&quot; is the final album of the progressive rock band Pink Floyd.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+              "True"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "A Saxophone is a brass instrument.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+              "True"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "American rapper Dr. Dre actually has a Ph.D. doctorate.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+              "True"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "Eurobeat is primarily an Italian genre of music.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "Ashley Frangipane performs under the stage name Halsey.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "The music group Daft Punk got their name from a negative review they recieved.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "Scatman John&#039;s real name was John Paul Larkin.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "The song &quot;Stronger Than You&quot; is a single by Estelle, who played Garnet in Steven Universe.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "Pink Guy&#039;s debut album was &quot;Pink Season&quot;.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+              "True"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "hard",
+            "category": "Entertainment: Music",
+            "question": "The song Scatman&#039;s World was released after Scatman (Ski-Ba-Bop-Ba-Dop-Bop).",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "Green Day&#039;s album &#039;American Idiot&#039; is considered a &quot;punk rock opera.&quot;",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "hard",
+            "category": "Entertainment: Music",
+            "question": "The singer Billie Holiday was also known as &quot;Lady Day&quot;.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "3 members of 2 Live Crew were arrested for playing songs from their album, As Nasty As They Wanna Be, live.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "&quot;Neutral Milk Hotel&quot; is a real band.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "The alternative rock band, They Might Be Giants, released their album &#039;Flood&#039; in 1990. ",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "Scottish producer Calvin Harris is from the town of Dumfries, Scotland.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "Lead Singer Rivers Cuomo of American rock band Weezer attended Harvard.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "Metallica collaborated with Rowan Atkinson&#039;s Mr Bean on a 1992 comic relief single.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+              "True"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "Michael Jackson wrote The Simpsons song &quot;Do the Bartman&quot;.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+              "True"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "Dave Grohl recorded the Foo Fighters&#039; debut, &quot;Foo Fighters,&quot; by himself.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "The cover of The Beatles album &quot;Abbey Road&quot; featured a Volkswagen Beetle in the background.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "Daft Punk originated in France.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "The 2011 movie &quot;The Adventures of Tintin&quot; was directed by Steven Spielberg.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "The country song  &ldquo;A Boy Named Sue&rdquo; was written by Shel Silverstein.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "For his performance at ComplexCon 2016 in Long Beach, California, Skrillex revived his &quot;Mothership&quot; set piece for one night only.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          }
+        ]
+      },
+      "multiple":{
+        "response_code": 0,
+        "results": [
+          {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Music",
+            "question": "Who recorded the 1975 album &#039;Captain Fantastic and the Brown Dirt Cowboy&#039;?",
+            "correct_answer": "Elton John",
+            "incorrect_answers": [
+              "John Denver",
+              "Billy Joel",
+              "Joe Cocker"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Music",
+            "question": "What is the first track on the Dave Matthews Band album &quot;Before These Crowded Streets&quot;?",
+            "correct_answer": "Pantala Naga Pampa",
+            "incorrect_answers": [
+              "Stay (Wasting Time)",
+              "Rapunzel",
+              "Don&#039;t Drink The Water"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "Which 80s band is fronted by singer/guitarist Robert Smith?",
+            "correct_answer": "The Cure",
+            "incorrect_answers": [
+              "The Smiths",
+              "Echo &amp; the Bunnymen",
+              "New Order"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "Which member of the Foo Fighters was previously the drummer for Nirvana?",
+            "correct_answer": "Dave Grohl",
+            "incorrect_answers": [
+              "Taylor Hawkins",
+              "Nate Mendel",
+              "Chris Shiflett"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Music",
+            "question": "Which Death Grips album is the only one to feature a band member?",
+            "correct_answer": "No Love Deep Web",
+            "incorrect_answers": [
+              "Bottomless Pit",
+              "The Money Store",
+              "The Powers That B"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "The &quot;British Invasion&quot; was a cultural phenomenon in music where British boy bands became popular in the USA in what decade?",
+            "correct_answer": "60&#039;s",
+            "incorrect_answers": [
+              "50&#039;s",
+              "40&#039;s",
+              "30&#039;s"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "According to a song by Belinda Carlisle, Heaven is a place on what?",
+            "correct_answer": "Earth",
+            "incorrect_answers": [
+              "Venus",
+              "Mars",
+              "Uranus"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Music",
+            "question": "Which of these artists did NOT feature in the fitfh studio album &quot;Humanz&quot; by British virtual band Gorillaz?",
+            "correct_answer": "Snoop Dogg",
+            "incorrect_answers": [
+              "Vince Staples",
+              "Pusha T",
+              "Danny Brown"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "Who was the guitarist in the band &quot;The Doors&quot;?",
+            "correct_answer": "Robby Krieger",
+            "incorrect_answers": [
+              "Eric Clapton",
+              "John Densmore",
+              "Jimi Hendrix"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "Which of these is not an Ed Sheeran album?",
+            "correct_answer": "-",
+            "incorrect_answers": [
+              "+",
+              "X",
+              "&divide;"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "Which album by American rapper Kanye West contained songs such as &quot;Love Lockdown&quot;, &quot;Paranoid&quot; and &quot;Heartless&quot;?",
+            "correct_answer": "808s &amp; Heartbreak",
+            "incorrect_answers": [
+              "Late Registration",
+              "The Life of Pablo",
+              "Graduation"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "Which Nirvana album had a naked baby on the cover?",
+            "correct_answer": "Nevermind",
+            "incorrect_answers": [
+              "Bleach",
+              "In Utero",
+              "Incesticide"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "Which iconic album cover features the pulsar waves of CP 1919 placed in the center of the cover?",
+            "correct_answer": "Unknown Pleasures",
+            "incorrect_answers": [
+              "The Dark Side of the Moon",
+              "London Calling",
+              "The Velvet Underground &amp; Nico"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Music",
+            "question": "Which year was the album &quot;Floral Shoppe&quot; by Macintosh Plus released?",
+            "correct_answer": "2011",
+            "incorrect_answers": [
+              "2014",
+              "2013",
+              "2012"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "Who is the founder and leader of industrial rock band, &#039;Nine Inch Nails&#039;?",
+            "correct_answer": "Trent Reznor",
+            "incorrect_answers": [
+              "Marilyn Manson",
+              "Robin Finck",
+              "Josh Homme"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "What was The Velvet Underground&#039;s first album called?",
+            "correct_answer": "The Velvet Underground &amp; Nico",
+            "incorrect_answers": [
+              "Loaded",
+              "The Velvet Underground",
+              "White Light / White Heat"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "Which of these is NOT the name of an album released by Miami-based producer DJ Khaled?",
+            "correct_answer": "Don&#039;t Ever Play Yourself",
+            "incorrect_answers": [
+              "Major Key",
+              "Suffering From Success",
+              "I Changed A Lot"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "Which band had hits in 1972 with the songs &quot;Baby I&#039;m A Want You&quot;, &quot;Everything I Own&quot; and &quot;The Guitar Man&quot;",
+            "correct_answer": "Bread",
+            "incorrect_answers": [
+              "America",
+              "Chicago",
+              "Smokie"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Music",
+            "question": "Chino Moreno is the lead singer of which alternative metal band?",
+            "correct_answer": "Deftones",
+            "incorrect_answers": [
+              "Tool",
+              "Korn",
+              "Type O Negative"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "What is the stage name of English female rapper Mathangi Arulpragasam, who is known for the song &quot;Paper Planes&quot;?",
+            "correct_answer": "M.I.A.",
+            "incorrect_answers": [
+              "K.I.A.",
+              "C.I.A.",
+              "A.I.A."
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "What is the real name of Canadian electronic music producer deadmau5?",
+            "correct_answer": "Joel Zimmerman",
+            "incorrect_answers": [
+              "Sonny Moore",
+              "Adam Richard Wiles",
+              "Thomas Wesley Pentz"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Music",
+            "question": "What was the name of the cold-war singer who has a song in Grand Theft Auto IV, and a wall landmark in Moscow for his memorial?",
+            "correct_answer": "Viktor Tsoi",
+            "incorrect_answers": [
+              "Jimi Hendrix",
+              "Brian Jones",
+              "Vladimir Vysotsky"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "Who is the lead singer of Silverchair?",
+            "correct_answer": "Daniel Johns",
+            "incorrect_answers": [
+              "Ben Gillies",
+              "Chris Joannou",
+              "George Costanza"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "What musician made the song &quot;Fuckin` Perfect&quot; in 2010?",
+            "correct_answer": "P!nk",
+            "incorrect_answers": [
+              "Mitis",
+              "Adam lambert",
+              "Koven"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "Which year was the album &quot;Year of the Snitch&quot; by Death Grips released?",
+            "correct_answer": "2018",
+            "incorrect_answers": [
+              "2013",
+              "2017",
+              "2011"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Music",
+            "question": "Where was Nicki Minaj born?",
+            "correct_answer": "Trinidad and Tobago",
+            "incorrect_answers": [
+              "Haiti",
+              "Saint Lucia",
+              "Grenada"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "Which of these songs by Skrillex features Fatman Scoop as a side artist?",
+            "correct_answer": "Recess",
+            "incorrect_answers": [
+              "All is Fair in Love and Brostep",
+              "Rock N Roll (Will Take You to the Mountain)",
+              "Scary Monsters and Nice Sprites"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "Which of the following songs did Elton John perform following Princess Diane&#039;s passing?",
+            "correct_answer": "Candles in the Wind",
+            "incorrect_answers": [
+              "I Guess That&#039;s Why They Call It The Blues",
+              "Your Song",
+              "Island Girl"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Music",
+            "question": "The key of sharps does the key of G# minor contain?",
+            "correct_answer": "5",
+            "incorrect_answers": [
+              "3",
+              "7",
+              "0"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "Which of these bands are NOT from Australia?",
+            "correct_answer": "The Naked and Famous",
+            "incorrect_answers": [
+              "Cut Copy",
+              "Empire of the Sun",
+              "Tame Impala"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "Who performed &quot;I Took A Pill In Ibiza&quot;?",
+            "correct_answer": "Mike Posner",
+            "incorrect_answers": [
+              "Avicii",
+              "Robbie Williams",
+              "Harry Styles"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "Who had a US and UK number 1 hit in 1962 with the instrumental, &#039;Telstar&#039;?",
+            "correct_answer": "The Tornados",
+            "incorrect_answers": [
+              "The Ventures",
+              "The Spotnicks",
+              "The Tremeloes"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "&quot;Lift Your Spirit&quot; is an album by which artist?",
+            "correct_answer": "Aloe Blacc",
+            "incorrect_answers": [
+              "Lena Meyer-Landrut",
+              "Stevie Wonder",
+              "Taylor Swift"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "Which of these songs did Jimi Hendrix cover?",
+            "correct_answer": "All of these songs",
+            "incorrect_answers": [
+              "Sgt. Pepper&#039;s Lonely Hearts Club Band",
+              "All Along the Watchtower",
+              "House of the Rising Sun"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Music",
+            "question": "Who had a 1981 hit with the song &quot;Japanese Boy&quot;?",
+            "correct_answer": "Aneka",
+            "incorrect_answers": [
+              "Toyah",
+              "Sandra",
+              "Madonna"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "How many studio albums have the heavy metal band, &#039;Metallica&#039; released in the period between 1983 and 2016?",
+            "correct_answer": "10",
+            "incorrect_answers": [
+              "7",
+              "9",
+              "12"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "EDM record label Monstercat is based in which country?",
+            "correct_answer": "Canada",
+            "incorrect_answers": [
+              "United States",
+              "Australia",
+              "United Kingdom"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "Which artist released the 2012 single &quot;Harlem Shake&quot;, which was used in numerous YouTube videos in 2013?",
+            "correct_answer": "Baauer",
+            "incorrect_answers": [
+              "RL Grime",
+              "NGHTMRE",
+              "Flosstradamus"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "Who was walking like an Egyptian in 1981?",
+            "correct_answer": "The Bangles",
+            "incorrect_answers": [
+              "R.E.M.",
+              "The Ocean Blue",
+              "The Connells"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Music",
+            "question": "In Kendrick Lamar&#039;s 2012 album, &quot;Good Kid, M.A.A.D City&quot;, the album&#039;s story takes place in which city?",
+            "correct_answer": "Compton",
+            "incorrect_answers": [
+              "Detroit",
+              "New York",
+              "Baltimore"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Music",
+            "question": "In the Panic! At the Disco&#039;s song &quot;Nothern Downpour&quot;, which lyric follows &#039;I know the world&#039;s a broken bone&#039;.",
+            "correct_answer": "&quot;So melt your headaches call it home&quot;",
+            "incorrect_answers": [
+              "&quot;So sing your song until you&#039;re home&quot;",
+              "&quot;So let them know they&#039;re on their own&quot;",
+              "&quot;So start a fire in their cold stone&quot;"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "How many strings are there on a cello?",
+            "correct_answer": "4",
+            "incorrect_answers": [
+              "5",
+              "6",
+              "8"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Music",
+            "question": "What is the English title of the vaporwave track &quot;リサフランク420 / 現代のコンピュー&quot; by Macintosh Plus (Vektroid)?",
+            "correct_answer": "Lisa Frank 420 / Modern Computing",
+            "incorrect_answers": [
+              "Smoke Weed 420 / Everyday",
+              "Make Your Move 420 / My Mind",
+              "It&#039;s All In Your Head 420 / Understand"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Music",
+            "question": "What is the official name of Prince&#039;s backing band?",
+            "correct_answer": "The Revolution",
+            "incorrect_answers": [
+              "The Paupers",
+              "The Wailers",
+              "The Heartbreakers"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "Who had a 1983 hit with the song &#039;Africa&#039;?",
+            "correct_answer": "Toto",
+            "incorrect_answers": [
+              "Foreigner",
+              "Steely Dan",
+              "Journey"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "The Proclaimers - I&#039;m Gonna Be (500 Miles) reached what position on the US Hot 100 Charts in 1993?",
+            "correct_answer": "3rd",
+            "incorrect_answers": [
+              "8th",
+              "1st",
+              "5th"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Music",
+            "question": "Finish these lyrics from the 2016 song &quot;Panda&quot; by Desiigner: &quot;I got broads in _______&quot;.",
+            "correct_answer": "Atlanta",
+            "incorrect_answers": [
+              "Savannah",
+              "Augusta",
+              "Marietta"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "What was Britney Spears&#039; debut single?",
+            "correct_answer": "...Baby One More Time",
+            "incorrect_answers": [
+              "Oops!... I Did It Again",
+              "(You Drive Me) Crazy",
+              "Toxic"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "Who was the lead singer and frontman of rock band R.E.M?",
+            "correct_answer": "Michael Stipe",
+            "incorrect_answers": [
+              "Chris Martin",
+              "Thom Yorke",
+              "George Michael"
+            ]
+          },
+          {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Music",
+            "question": "What is the first track on Kanye West&#039;s 808s &amp; Heartbreak?",
+            "correct_answer": "Say You Will",
+            "incorrect_answers": [
+              "Welcome to Heartbreak",
+              "Street Lights",
+              "Heartless"
+            ]
+          }
+        ]
+      }
+}

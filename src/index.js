@@ -4,11 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import LoginUserProvider from './Context/LoginUserContext';
+import QuizContextProvider from './Context/QuizContext';
+import AdminContextProvider from './Context/AdminContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 <LoginUserProvider>
+<AdminContextProvider>
+  <QuizContextProvider>
 <App />
+  </QuizContextProvider>
+  </AdminContextProvider>
 </LoginUserProvider>
   </React.StrictMode>
 );

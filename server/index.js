@@ -3,9 +3,13 @@ const cors=require('cors')
 const LocalStrategy=require('passport-local').Strategy;
 
 const session=require('cookie-session')
+// const session = require('express-session');
 const passportSetup=require('./passport')
 const passport=require('passport')
 const authRoute=require('./Routes/authRoute')
+const quizRoute=require('./Routes/quizRoute')
+const studentRoute=require('./Routes/studentRoute')
+const adminRoute=require('./Routes/adminRoute')
 const app=express()
 const {connectToDb}=require('./DB/dbConfig')
 connectToDb()
@@ -16,14 +20,30 @@ app.use(
     credentials: true,
   }))
 
-app.use(session({
-  keys:['thisiskey1'],
-  maxAge:60*60*24*100
-}))
+  app.use(session({
+    name: 'session',
+    keys: ['your-secret-key'],
+    
+    maxAge: 24 * 60 * 60 * 1000000, // 24 hours
+    // sameSite:'none',
+    secure:false
+}));
+// app.use(session({
+//   secret: 'your-secret-key',
+//   resave: true,
+//   saveUninitialized:true,
+//   cookie: {
+//     maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days in milliseconds
+//     httpOnly: false
+// }
+// }));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(passport.authenticate('session'))
+
 app.use(authRoute)
+app.use(quizRoute)
+app.use(studentRoute)
+app.use(adminRoute);
 
 
 

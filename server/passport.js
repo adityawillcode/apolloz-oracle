@@ -14,14 +14,17 @@ passport.use(new GoogleStrategy({
   },
  async function(accessToken, refreshToken, profile, cb) {
   try{
-    const {displayName,email,provider}=profile
-    const user=await User.findOne({email})
-    if(user){
-      cb(null,user)
-    }else{
-      const newUser=new User({email,name:displayName,provider})
+    const {displayName,provider}=profile
+    console.log('this is profile',profile);
+    console.log('this is my email:',profile._json.email)
+    const user=await User.findOne({email:profile._json.email,provider:'google'})
+    if(!user){
+      const newUser=new User({email:profile._json.email,name:displayName,provider,profileId:profile.id})
       await newUser.save()
       cb(null , newUser)
+    }else{
+      
+      cb(null,user)
     }
   }catch(err){
       cb(err,false,{message:'authentication failed'})
@@ -33,39 +36,29 @@ passport.use(new GoogleStrategy({
   /// local stratigy  
 
   passport.use(new LocalStrategy(
-    async function(username,email, password,cb) {
-     const user=await User.findOne({email})
-     if(!user){
-      const error=new Error('couldn\'t find user')
-      cb(error,false,{message:"couldn't find user"})
-     }else{
-      cb(null,user._id)
-     }
+    async function(req,username, password,cb) {
+     console.log('this is req.body', req.body);
     }
   ));
-
-
-
-
-
-
-
-
-
-
-
 
   passport.serializeUser((user, cb) => {
     cb(null, user._id);
   });
   
-  passport.deserializeUser( (id, cb) => {
-    
-  User.findById(id).then((user) => {
-    if(user){ return cb(null,user) }
-    else{
-      const error=new Error('invalid session cookie')
-      cb(error,false,{message:'no session cookie found '})}
-  })
-
+  passport.deserializeUser(async (id, cb) => {
+    try {
+      console.log('this is id', id);
+  
+      const user = await User.findById(id);
+      console.log(user);
+      
+      if (user && user.name) {
+        cb(null, user);
+      } else {
+        const error = new Error('invalid cookie');
+        cb(error, false, { message: 'invalid cookie' });
+      }
+    } catch (err) {
+      return cb(err,false, {message: 'invalid cookie'});
+    }
   });
