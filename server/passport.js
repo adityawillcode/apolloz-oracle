@@ -47,11 +47,7 @@ passport.use(new GoogleStrategy({
   
   passport.deserializeUser(async (id, cb) => {
     try {
-      console.log('this is id', id);
-  
-      const user = await User.findById(id);
-      console.log(user);
-      
+      const user = await User.findById(id);  
       if (user && user.name) {
         cb(null, user);
       } else {

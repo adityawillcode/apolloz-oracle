@@ -6,9 +6,11 @@ import Main from './Main'
 import RightSidebar from './RightSidebar'
 import  { useAdminContext } from '../../Context/AdminContext'
 function AdminDashboard({loginData}) {
+  
   const {groupsOfAdmin}=useAdminContext()
   const [leftSidebarOpen,setLeftSidebarOpen]=useState(true)
   const [selectedGroup,setSelectedGroup]=useState({})
+
   return (
 
       <div className='bg-[#2B2D31] dashboard-bg h-screen w-screen fixed admin-dashboard '>

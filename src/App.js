@@ -8,6 +8,7 @@ import CreateQuiz from './Components/Admin/CreateQuiz';
 import PageNotFound from './Components/Auth/PageNotFound'
 import StudentDashboard from './Components/Student/StudentDashboard';
 import ChooseUserRole from './Components/Auth/ChooseUserRole';
+import QuizPage from './Components/Student/QuizPage';
 
 
 function App() {
@@ -60,6 +61,7 @@ const protectDashboard = (element) => {
   <Route path='/student/dashboard' element={protectDashboard(<StudentDashboard/>)} />
   <Route path='/admin/dashboard/create-quiz' element={protectDashboard(<CreateQuiz/>)} />
   <Route path='/page-not-found' element={<PageNotFound />} />
+  <Route path='/student/quiz/:quizDbId/:quizId' element={<QuizPage />}/>
 </Routes>
   </Router>
   );

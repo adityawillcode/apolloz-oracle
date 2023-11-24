@@ -7,7 +7,7 @@ import {IoIosSettings} from 'react-icons/io'
 import { AnimatePresence ,motion} from 'framer-motion'
 import { useLoginUser } from '../../Context/LoginUserContext'
 function StudentNavbar({setNotificatonPanelOpen,notificationPanelOpen}) {
-  const [showSettings,setShowSettings] = useState(true)
+  const [showSettings,setShowSettings] = useState(false)
   const {logoutUser}=useLoginUser()
 
   const handleLogout =async () => {

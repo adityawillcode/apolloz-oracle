@@ -20,7 +20,13 @@ const studentSchema = new mongoose.Schema({
     isAttempted:{
         type: Boolean
     }
-  }]
+  }],
+  groups:[
+    {
+      groupId: mongoose.Types.ObjectId,
+      groupName:String
+    }
+  ]
 })
 
 const Student = mongoose.model('student', studentSchema);

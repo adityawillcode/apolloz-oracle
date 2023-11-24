@@ -15,6 +15,15 @@ admins:[
         adminName:String,
         adminId:mongoose.Types.ObjectId 
     }
+],
+quizes:[
+    {
+        quizId:String,
+        date:String,
+        topic:String,
+        duration:Number,
+        numberOfQuestions:Number
+    }
 ]
 })
 

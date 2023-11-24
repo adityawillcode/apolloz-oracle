@@ -21,7 +21,8 @@ profileId:String
   },
  
  groups:[{
-    groupId:mongoose.Types.ObjectId
+  groupName:String 
+  , groupId:mongoose.Types.ObjectId
  }],
  quizes:[{
     groupData:{
@@ -30,15 +31,9 @@ profileId:String
     },
     quizId:{
         type:String
-    }
-    
- }],
- liveQuizes:[{
-    startingTime:Date,
-    endingTime:Date,
-    quizId:{
-        type:String
-    }
+    },
+    date:String,
+    topic:String 
  }]
 });
 

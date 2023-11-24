@@ -18,18 +18,17 @@ export const useQuizContext = () => {
 function QuizContextProvider({children}) {
   const categories={
     'General Knowledge':gkQuiz,'Animals':animalQuiz,'Sports':sportsQuiz,'History':historyQuiz,'Science Mathematics':mathsQuiz,'Science Computers':computerQuiz,'Music':musicQuiz
-  
-  }
+}
 
 // import quiz questions from json file
 
-  const [newQuiz,setNewQuiz]=useState({questions:[],groupData:{},duration:'',date:''})  // quiz data=groupData ,category,type,difficulty,amount,duration,adminData,
+  const [newQuiz,setNewQuiz]=useState({questions:[],groupData:{},duration:30,date:''})  // quiz data=groupData ,category,type,difficulty,amount,duration,adminData,
 
   // create quiz using external json file
 const createQuiz = (formData) => {
   let  {amount,category,type,duration,groupData,date}=formData
   const randomQuestions=getRandomElements(categories[category][type]['results'],amount)
-  setNewQuiz({questions:[...randomQuestions],groupData,duration,date})
+  setNewQuiz({questions:[...randomQuestions],groupData,duration,date,topic:category})
 };
 
 
@@ -49,8 +48,7 @@ const createQuiz = (formData) => {
     }
   }
   
-  function getRandomElements(questions, amount) {
-
+function getRandomElements(questions, amount) {
     for (let i = questions.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [questions[i], questions[j]] = [questions[j], questions[i]];

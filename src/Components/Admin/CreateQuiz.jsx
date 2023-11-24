@@ -14,20 +14,18 @@ function CreateQuiz() {
     groupData: {},
     category: '',
     type: 'multiple',
-    difficulty: '',
-    date: '2023-11-22',
+    date: '2023-11-25',
     amount: 10,
     duration: 30,
   });
-  const { groupsOfAdmin } = useAdminContext();
+  const { groupsOfAdmin,getStudentList,studentList} = useAdminContext();
+  
   const { createQuiz, setQuiz , newQuiz ,setNewQuiz} = useQuizContext();
 
   const categories=[
     'General Knowledge','Celebrities','Animals','Sports','History','Science Mathematics','Science Computers','Music'
   
   ]
-  const difficulty = ['easy', 'medium', 'hard'];
-
   const handleAutoGenerate = () => {
     createQuiz(formData)
 };
@@ -35,7 +33,9 @@ const handleSubmit = () => {
   setQuiz()
 };
 
-
+const handleGroupChange = (groupId) => {
+  getStudentList(groupId)
+}
 
 
   return (
@@ -58,6 +58,7 @@ const handleSubmit = () => {
       groupName: selectedOption.textContent,
       groupId: selectedOption.value
     };
+  handleGroupChange(selectedOption.value)
     setFormData({ ...formData, groupData: selectedGroup });
   }}
   className='bg-transparent text-white p-[5px] outline-none border-gray-400 border w-[7rem] rounded-md'
@@ -65,10 +66,13 @@ const handleSubmit = () => {
   <option value='default' disabled>
     select group
   </option>
-  <option value='groupId1'>Group 1</option>
-  <option value='groupId2'>Group 2</option>
-  <option value='groupId3'>Group 3</option>
-  <option value='groupId4'>Group 4</option>
+  {
+    groupsOfAdmin.map((group)=>{
+      return(
+        <option value={group.groupId}>{group.groupName}</option>     
+      )
+    })
+  }
 </select>
           </div>
           <div className='flex gap-8'>
@@ -181,7 +185,7 @@ const handleSubmit = () => {
        <AnimatePresence>
        {formData.groupData.groupName && (
           <motion.div initial={{x:'-15rem',opacity:0}} animate={{x:'0',opacity:1}} exit={{x:'-15rem',opacity:1}} transition={{duration:0.2}} className='absolute right-[-15rem] top-0 h-full'>
-            <GroupList />
+          {studentList.length>0?  <GroupList studentList={studentList} />:<></>}
           </motion.div>
         )}
        </AnimatePresence>
