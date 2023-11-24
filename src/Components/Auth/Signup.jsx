@@ -1,5 +1,5 @@
 import React ,{useState} from 'react'
-import { GoogleLoginButton,GithubLoginButton } from 'react-social-login-buttons'
+import { GoogleLoginButton } from 'react-social-login-buttons'
 import {useForm} from 'react-hook-form'
 function Signup({setAuthKey}) {
   const [data,setData]=useState({})
@@ -7,11 +7,13 @@ function Signup({setAuthKey}) {
   const [showPassword,setShowPassword]=useState(false)
   const onSubmit = async (formData) => {
     console.log(formData)
-    const result=await fetch('http://localhost:4000/signup/local',{credentials:'include',
-      method: 'POST',body:JSON.stringify({...formData,isLogin:false}),headers: {'Content-Type': 'application/json'}
+    const result=await fetch('http://localhost:4000/auth/signup',{credentials:'include',
+      method: 'POST',body:JSON.stringify({...formData}),headers: {'Content-Type': 'application/json'}
     })
+    const response = await result.json()
+    console.log(response);
+    reset()
     
-
   };
   
   
@@ -33,7 +35,7 @@ function Signup({setAuthKey}) {
       </div>
      <div className='flex justify-center items-center'> <span className='flex-grow h-[1px] bg-gray-400'></span><span className='text-[10px] text-gray-400'>social-signup</span><span className='flex-grow h-[1px] bg-gray-400'></span></div>
     <GoogleLoginButton size='30px' align='center' iconSize='20px' style={{background:'white',fontFamily:'Nunito',}} >Signup with Google</GoogleLoginButton>
-    <GithubLoginButton size='30px' align='center' iconSize='20px' style={{background:'white',color:'black'}}  >Signup with Github</GithubLoginButton>
+  
       </form>
      
 

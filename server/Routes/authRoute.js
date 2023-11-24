@@ -10,67 +10,24 @@ const Student = require('../DB/Models/Student')
 
 
 
-
-router.post('/signup/local',passport.authenticate('local',{failureRedirect:FAILURE_REDIRECT_ROUTE,successRedirect:SUCESS_REDIRECT_ROUTE}));
-
-// local auth
-
-// router.post('/auth/login',async (req,res)=>{
-//   const {email,password,userType}=req.body
-//   if(userType=='ADMIN'){
-//     const admin=await Admin.findOne({email})
-//     if(admin){
-//       console.log(admin);
-//       const isMatch = await bcrypt.compare( password,admin.password);
-//       console.log(isMatch);
-      
-//         if(!isMatch){return res.send({error: 'password mismatch'}).status(400)}
-//         req.session.user=admin
-//     }
-//     else{
-//      res.json({error:'user not found'})
-//     }
-//   }
-//   else if(userType=='STUDENT'){
-//     const student=await Student.findOne({email})
-//     if(student){
-//       const isMatch = await bcrypt.compare( password,student.password);
-//       if(!isMatch){return res.status(400).send({error:'password mismatch'})}
-//       req.session.user=student
-//     }
-//     else{
-//      res.json({error:'user not found'})
-//     }
-//   }
- 
-// })
+// local signup
+router.post('/auth/signup',async (req,res)=>{
+  const {email,password,name}=req.body
+    const user=await User.findOne({email,provider:'local'})
+    if(user){res.send({error:'user already exists'})}
+    else{
+      const salt = await bcrypt.genSalt(10);
+      const hashedPassword = await bcrypt.hash(password, salt);
+      const newUser=new User({email,password:hashedPassword,name})
+     await newUser.save()
+     res.send({message:'User Sucessfully Registered'})
+    }
+})
 
 
-// router.post('/auth/signup',async (req,res)=>{
-//   const {email,password,userType,name}=req.body
-//   if(userType=='ADMIN'){
-//     const admin=await Admin.findOne({email})
-//     if(admin){res.json({error:'user already exists'})}
-//     else{
-//       const salt = await bcrypt.genSalt(10);
-//       const hashedPassword = await bcrypt.hash(password, salt);
-//       const newAdmin=new Admin({email,password:hashedPassword,userType,name})
-//       newAdmin.save()
-//     }
-//   }
-//   else if(userType=='STUDENT'){
-//     const student=await Student.findOne({email})
-//     if(student){res.json({error:'user already exists'})}
-//     else{
-//       const salt = await bcrypt.genSalt(10);
-//       const hashedPassword = await bcrypt.hash(password, salt);
-//       const newStudent=new Student({email,password:hashedPassword,userType,name})
-//       newStudent.save()
-//       res.send(newStudent)
-//     }
-//   }
- 
-// })
+router.post('/auth/signin',passport.authenticate('local',{failureRedirect:FAILURE_REDIRECT_ROUTE,successRedirect:SUCESS_REDIRECT_ROUTE}));
+
+
 
 
 
@@ -78,6 +35,7 @@ router.post('/signup/local',passport.authenticate('local',{failureRedirect:FAILU
 // google auth
 router.get("/auth/google",passport.authenticate("google", { scope: ["profile","email"],prompt:'consent' }));
 router.get( "/auth/google/callback",passport.authenticate("google",{failureRedirect:FAILURE_REDIRECT_ROUTE,successRedirect:SUCESS_REDIRECT_ROUTE}))
+
 
 router.get('/getData', (req, res) => {
   console.log('this is user',req.user);
@@ -106,9 +64,10 @@ router.post('/update-user-role',async (req,res)=>{
     
   }catch(err){
     res.send({error: err.message})
-  }
-    
+  }  
 })
+
+
 
 router.post('/create-profile',async (req,res)=>{
 const user=await User.findById(req.user._id)

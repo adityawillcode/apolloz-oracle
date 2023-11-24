@@ -2,12 +2,13 @@ const mongoose = require('mongoose');
 
 const UserSchema=new mongoose.Schema({
   name:String,
-  email:{type:String},
+  email:{type:String,},
   profileId:String,
   userRole: {
     type: String,
     enum: ['ADMIN', 'STUDENT']
   },
+  password:String,
   userId:mongoose.Types.ObjectId,
   provider:{
     type:String,
