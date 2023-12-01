@@ -1,25 +1,22 @@
 const mongoose = require('mongoose');
 
 const adminSchema = new mongoose.Schema({
-userRole:{
-  type: String
-},provider:{
+name: {
+    type: String,
+    required: true,
+  }
+,
+profileId:String
+  ,  provider:{
   type: String
 },
-profileId:String
-  ,  name: {
-    type: String,
-    required: true,
-  },
   email: {
     type: String,
-    required: true,
-    unique: true,
   },
   password: {
     type: String,
   },
- 
+
  groups:[{
   groupName:String 
   , groupId:mongoose.Types.ObjectId
@@ -30,7 +27,7 @@ profileId:String
       groupId:String
     },
     quizId:{
-        type:String
+        type:mongoose.Types.ObjectId
     },
     date:String,
     topic:String 

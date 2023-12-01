@@ -6,7 +6,6 @@ const Group = require('../DB/Models/Group')
 const router=express.Router()
 router.post('/create-quiz',async (req,res)=>{
 // req.body  =  { newQuiz :{ questions:{question,correct,incorrect,type},groupData:{groupName,groupId},duration,date } , quizId
-const quizId=req.body.quizId
 const questions=req.body.newQuiz.questions
 const groupData=req.body.newQuiz.groupData
 const duration=req.body.newQuiz.duration
@@ -17,7 +16,7 @@ console.log({groupData,duration,date,topic});
 const adminData={adminName:req.user.name,adminId:req.user._id}
 // add new quiz to quiz Model
   const newQuizAdded=new Quiz({
-        quizId,groupData,quiz:questions,adminData,duration,date,topic
+        groupData,quiz:questions,adminData,duration,date,topic
     })
     await newQuizAdded.save()
 
@@ -29,20 +28,30 @@ const adminData={adminName:req.user.name,adminId:req.user._id}
     if(!admin) return console.log('admin doesnt exist');
     else{
       admin.quizes.push({
-        quizId,groupData,date,topic
+        quizId:newQuizAdded._id,groupData,date,topic
       })
      await admin.save()
      res.send(newQuizAdded)
     }   
 
-    // add quiz to group
-    console.log(groupData);
-    
+   
     const group=await Group.findById(groupData.groupId)
-    group.quizes.push({quizId,date,topic,duration,numberOfQuestions:questions.length})
+    group.quizes.push({quizId:newQuizAdded._id,date,topic,duration,numberOfQuestions:questions.length})
     await group.save()
+ 
+
+})
 
 
+router.get('/get-quiz',async (req,res)=>{
+  const {quizId}=req.query.quizId
+  const quiz=await Quiz.findOne({
+    quizId
+  })
+  console.log('this is quiz',quiz);
+  
+  if(!quiz) return
+  res.send(quiz)
 })
 
 

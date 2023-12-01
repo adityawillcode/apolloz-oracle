@@ -1,7 +1,55 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { AnimatePresence,motion } from 'framer-motion'
+import { useQuizContext } from '../../Context/QuizContext'
 function QuizPage() {
+  const {selectedQuiz,setSelectedQuiz,getQuiz}= useQuizContext()
+
+  const {quizId}=useParams()
+
+
+useEffect(()=>{
+  getQuiz(quizId)
+},[])
+
+  function shuffleArray(array) {
+    const shuffledArray = [...array];
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+    }
+    return shuffledArray;
+  }
+
+  const [quizData,setQuizData]=useState({})
+  const [marks,setMarks]=useState(0)
+
+  const handleSelectOption= (questionIndex,answer) => {
+
+    setQuizData((prevData)=>{
+      return {...prevData,[questionIndex]:answer}
+    })
+  };
+
+
+  const showResult = () => {
+    let newMarks=0
+    for(let i =0 ; i<selectedQuiz.quiz.length;i++){
+     console.log([quizData[`${i}`],selectedQuiz.quiz[i]['correct_answer']]);
+     
+      if(quizData[`${i}`]===selectedQuiz.quiz[i]['correct_answer']){
+      newMarks++
+      }
+    }
+   setMarks(newMarks)
+    
+  };
+
+useEffect(()=>{
+  console.log(marks);
+  
+},[marks])  
+  
   const [allowQuiz,setAllowQuiz]=useState(false)
   return (
     <div className='animated-bg h-screen w-screen flex justify-center '>
@@ -27,7 +75,30 @@ function QuizPage() {
       }
       </AnimatePresence>
 
+        {allowQuiz && <div className='h-screen bg-black/30 w-full text-white py-[3rem] px-[3rem] flex flex-col gap-4 overflow-scroll hide-scrollbar'>
+          {
+           selectedQuiz.quiz && selectedQuiz.quiz.map((question,questionIndex)=>{
+            const options=[question['correct_answer'],...question['incorrect_answers']]
+                return(
+                  <div className=' flex flex-col gap-3 ' key={questionIndex} >
+                    <p className='flex gap-4'><span>Q{questionIndex+1}.</span><span>{question.question}</span></p>
+                   <div className='flex flex-col gap-2'>
+                    {
+                      options.map((option,index)=>{
+                        return(
+                          <p className={`flex gap-3 px-[1rem] hover:bg-white/40 py-2 cursor-pointer ${quizData[questionIndex]===option ? 'bg-white text-black ':''}`}  onClick={()=>{handleSelectOption(questionIndex,option)}}><span>{index+1}.</span><span>{option}</span></p>
+                        )
+                      })
+                    }
+                   </div>
+                  </div>
+                )
+            })
+          }
+        <div className='bg-green-600 text-white font-bold px-3 py-2 text-center hover:bg-green-700 rounded-lg' onClick={showResult}>Submit</div>
+        </div>}
         </div>
+
     </div>
   )
 }

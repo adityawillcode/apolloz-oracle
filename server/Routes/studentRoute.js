@@ -49,9 +49,6 @@ router.get('/get-quizes-of-student',async (req,res)=>{
     
     let allQuizes=[]
     groups.forEach((group)=>{
-        console.log("this is group",group);
-        
-        console.log("this is quizes",group.quizes);
      if(group.quizes.length > 0){
         
         const quizArray=group.quizes;

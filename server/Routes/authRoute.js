@@ -25,7 +25,16 @@ router.post('/auth/signup',async (req,res)=>{
 })
 
 
-router.post('/auth/signin',passport.authenticate('local',{failureRedirect:FAILURE_REDIRECT_ROUTE,successRedirect:SUCESS_REDIRECT_ROUTE}));
+router.post('/auth/signin', passport.authenticate('local', {
+  failureRedirect: FAILURE_REDIRECT_ROUTE,
+  failureFlash: true
+}), (req, res) => {
+  if (req.user.name) {
+    console.log('this is username', req.user.email);
+    res.status(200).send({message:'user sucessfully logged in'})
+    console.log(req.session);
+  }
+}); 
 
 
 
@@ -33,12 +42,22 @@ router.post('/auth/signin',passport.authenticate('local',{failureRedirect:FAILUR
 
 
 // google auth
-router.get("/auth/google",passport.authenticate("google", { scope: ["profile","email"],prompt:'consent' }));
+router.get("/auth/google",passport.authenticate("google", { scope: ["profile","email"], prompt:'consent' }));
 router.get( "/auth/google/callback",passport.authenticate("google",{failureRedirect:FAILURE_REDIRECT_ROUTE,successRedirect:SUCESS_REDIRECT_ROUTE}))
 
 
+router.get('/auth/github',
+  passport.authenticate('github', { scope: [ 'user:email' ] ,prompt: 'consent'}));
+// ,prompt:'consent'
+router.get('/auth/github/callback', 
+  passport.authenticate('github', { failureRedirect:FAILURE_REDIRECT_ROUTE }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect(SUCESS_REDIRECT_ROUTE);
+  });
+
+
 router.get('/getData', (req, res) => {
-  console.log('this is user',req.user);
   console.log(req.user);
   if(req.user){
     res.json(req.user)
@@ -71,20 +90,21 @@ router.post('/update-user-role',async (req,res)=>{
 
 router.post('/create-profile',async (req,res)=>{
 const user=await User.findById(req.user._id)
-    if(user.userRole=='ADMIN'){
+const {name,profileId,userRole,provider}=user;    
+if(user.userRole=='ADMIN'){
       console.log('this is admin')
-      
       const newAdmin=new Admin({
-        name:user.name,email:user.email,profileId:user.profileId,userRole:user.userRole
-      })
+        name,profileId,provider })
      await newAdmin.save()
      console.log('this is new admin',newAdmin);
      
      user.userId=newAdmin._id
     }
     else if(user.userRole=='STUDENT'){
+    
+      
       const newStudent=new Student({
-        name:user.name,email:user.email,userRole:user.userRole,profileId:user.profileId
+       name,profileId,provider
       })
       await newStudent.save()
       user.userId=newStudent._id
@@ -100,13 +120,13 @@ router.post('/logout', function(req, res,){
   console.log('logout')
   
   req.logout()
+  req.session.destroy()
   if(!req.user)
   {res.status(200).send({message: 'user sucessfully logged out'})}
   else{
     res.status(403).send({error:'logout failed'})
-  }
-  
-});
+  }  
+})
 
 
 

@@ -23,6 +23,7 @@ function QuizContextProvider({children}) {
 // import quiz questions from json file
 
   const [newQuiz,setNewQuiz]=useState({questions:[],groupData:{},duration:30,date:''})  // quiz data=groupData ,category,type,difficulty,amount,duration,adminData,
+  const [selectedQuiz,setSelectedQuiz]=useState({})
 
   // create quiz using external json file
 const createQuiz = (formData) => {
@@ -34,10 +35,9 @@ const createQuiz = (formData) => {
 
   // send quiz to server
   const setQuiz =async () => { // we will have adminData from req.user object
-    
-    const quizId=uuid()
+
     const result=await fetch('http://localhost:4000/create-quiz',{credentials:'include',
-      method: 'POST',headers: {'Content-Type': 'application/json'},body: JSON.stringify({newQuiz:{...newQuiz},quizId})
+      method: 'POST',headers: {'Content-Type': 'application/json'},body: JSON.stringify({newQuiz:{...newQuiz}})
     })
     const response=await result.json()
     if(response){
@@ -57,12 +57,21 @@ function getRandomElements(questions, amount) {
 }    
     
 
+const getQuiz =async (quizId) => {
+  const result=await fetch(`http://localhost:4000/get-quiz?quizId=${quizId}`,{credentials:'include'})
+  const response = await result.json();
+
+  if(response.quiz){
+  
+    setSelectedQuiz(response)
+  }
+};
 
 
     
 
   return(
-    <QuizContext.Provider value={{createQuiz,newQuiz,setNewQuiz,setQuiz}}>
+    <QuizContext.Provider value={{createQuiz,newQuiz,setNewQuiz,setQuiz,getQuiz,selectedQuiz}}>
     {children}
 </QuizContext.Provider>
   )

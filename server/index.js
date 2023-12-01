@@ -1,9 +1,10 @@
 const express=require('express')
 const cors=require('cors')
 const LocalStrategy=require('passport-local').Strategy;
-
-const session=require('cookie-session')
-// const session = require('express-session');
+const mongoose=require('mongoose')
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
+// const session=require('cookie-session')
 const passportSetup=require('./passport')
 const passport=require('passport')
 const authRoute=require('./Routes/authRoute')
@@ -16,27 +17,19 @@ connectToDb()
 app.use(express.json())
 app.use(
   cors({
-    origin: "http://localhost:3000", // location of the react app
+    origin: "http://localhost:3000",
     credentials: true,
   }))
+const mongoStore=MongoStore.create({mongoUrl:'mongodb://127.0.0.1/apolloz_oracle'})
 
-  app.use(session({
-    name: 'session',
-    keys: ['your-secret-key'],
-    
-    maxAge: 24 * 60 * 60 * 1000000, // 24 hours
-    // sameSite:'none',
-    secure:false
-}));
-// app.use(session({
-//   secret: 'your-secret-key',
-//   resave: true,
-//   saveUninitialized:true,
-//   cookie: {
-//     maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days in milliseconds
-//     httpOnly: false
-// }
-// }));
+app.use(session({
+  store: mongoStore,
+  secret: 'your-secret-key',
+  resave: false,
+  saveUninitialized: false,
+  cookie: { secure: false , maxAge: 10*24*60*60*1000  }
+}))
+
 app.use(passport.initialize());
 app.use(passport.session());
 

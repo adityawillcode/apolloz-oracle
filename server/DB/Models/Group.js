@@ -18,7 +18,7 @@ admins:[
 ],
 quizes:[
     {
-        quizId:String,
+        quizId:mongoose.Types.ObjectId,
         date:String,
         topic:String,
         duration:Number,

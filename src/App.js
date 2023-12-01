@@ -13,10 +13,6 @@ import QuizPage from './Components/Student/QuizPage';
 
 function App() {
 const [loginData,setLoginData]=useState({})
-
-
-
-
 const getLoginData =async () => {
   const result=await fetch('http://localhost:4000/getData',{credentials:'include'})
   const response=await result.json()
@@ -47,12 +43,8 @@ const protectDashboard = (element) => {
 
 };
 
-
-
-
   return (
   <Router>
-
 <Routes>
   <Route path='/' element={protectDashboard(<Home loginData={loginData} />)}/>
   <Route path='/auth' element={(<Auth loginData={loginData}/>)} />
@@ -61,7 +53,7 @@ const protectDashboard = (element) => {
   <Route path='/student/dashboard' element={protectDashboard(<StudentDashboard/>)} />
   <Route path='/admin/dashboard/create-quiz' element={protectDashboard(<CreateQuiz/>)} />
   <Route path='/page-not-found' element={<PageNotFound />} />
-  <Route path='/student/quiz/:quizDbId/:quizId' element={<QuizPage />}/>
+  <Route path='/student/quiz/:quizId' element={<QuizPage />}/>
 </Routes>
   </Router>
   );

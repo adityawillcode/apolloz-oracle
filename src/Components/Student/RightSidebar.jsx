@@ -3,14 +3,19 @@ import { BsLayoutSidebarInset } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
 import { AnimatePresence ,motion} from 'framer-motion'
 import { useStudentContext } from '../../Context/StudentContext'
+import { useQuizContext } from '../../Context/QuizContext'
 
 function RightSidebar({setNotificationPanelOpen,notificationPanelOpen}) {
 
 const navigate=useNavigate()
 const {allQuizes}=useStudentContext()
+const {getQuiz,selectedQuiz}=useQuizContext()
 
-const takeQuiz = (quizId,quizDbId) => {
-  window.open(window.location.origin+`/student/quiz/${quizDbId}/${quizId}`)
+const takeQuiz = (quizId) => {
+  getQuiz(quizId)
+  if(selectedQuiz.quiz) {
+    window.open(window.location.origin+`/student/quiz/${quizId}`)
+  }
 };
 
   return (
@@ -23,7 +28,7 @@ const takeQuiz = (quizId,quizDbId) => {
     {
       allQuizes.map((quiz,index)=>{
         return (
-          <div key={index} className=' text-gray-400 border border-gray-400 hover:border-gray-200  hover:text-gray-200 flex flex-col px-2 pt-6 pb-2 relative rounded-md cursor-pointer ' onClick={()=>{takeQuiz(quiz.quizId,quiz._id)}}>   
+          <div key={index} className=' text-gray-400 border border-gray-400 hover:border-gray-200  hover:text-gray-200 flex flex-col px-2 pt-6 pb-2 relative rounded-md cursor-pointer ' onClick={()=>{takeQuiz(quiz._id)}}>   
            <span className=' flex right-2 top-1  items-center absolute text-[10px] '>{quiz.date}</span>
            <span className='flex gap-2'><span style={{fontFamily:'monospace'}} className='text-gray-200'>Topic:</span><span className=' font-sans text-[12px] '>{quiz.topic}</span></span>
            <span className='flex gap-2'><span style={{fontFamily:'monospace'}} className='text-gray-200'>Dration:</span><span className=' font-sans text-[12px] '>{quiz.duration} min</span></span>
